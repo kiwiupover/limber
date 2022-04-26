@@ -46,6 +46,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.1.0",
     "@fortawesome/free-regular-svg-icons": "^6.1.0",
     "@fortawesome/free-solid-svg-icons": "^6.1.0",
+    "@glint/core": "^0.8.0",
     "@nullvoxpopuli/eslint-configs": "2.2.5",
     "@types/babel__core": "^7.1.18",
     "@types/codemirror": "5.60.5",
