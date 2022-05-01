@@ -1,7 +1,20 @@
 import HeadlessMenu from 'ember-headlessui/components/menu';
 import { PopperJS } from 'ember-popperjs';
 
-const Button = <template>
+import type { TemplateOnlyComponent as TOC } from '@ember/component/template-only';
+
+const Button: TOC<{
+  Element: HTMLButtonElement;
+  Args: {
+    /**
+     * TODO: add types to ember-headlessui
+     */
+    item: any
+  },
+  Blocks: {
+    default: []
+  }
+}> = <template>
   <@item as |item|>
     <item.Element
       @tagName="button"
@@ -19,7 +32,13 @@ const Button = <template>
   </@item>
 </template>;
 
-<template>
+const Menu: TOC<{
+  Element: HTMLButtonElement;
+  Blocks: {
+    trigger: [],
+    options: [],
+  }
+}> = <template>
   <HeadlessMenu as |menu|>
     <PopperJS as |trigger popover|>
       <menu.Button
@@ -45,3 +64,5 @@ const Button = <template>
     </PopperJS>
   </HeadlessMenu>
 </template>
+
+export default Menu;
