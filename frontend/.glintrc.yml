@@ -2,4 +2,4 @@ environment:
   - ember-loose
   - ember-template-imports
 include:
-  - 'app/components/**'
+  - 'app/**'
