@@ -1,6 +1,8 @@
 import state from 'limber/helpers/state';
 
-const attachShadow = (element, setShadow) => {
+import type { TemplateOnlyComponent as TOC } from '@ember/component/template-only';
+
+const attachShadow = (element: Element, setShadow: state['update']) => {
   setShadow(element.attachShadow({ mode: 'open' }));
 };
 
@@ -11,6 +13,9 @@ const getStyles = () => {
   return [...document.head.querySelectorAll('link')].map(link => link.href);;
 }
 
+const Shadowed: TOC<{
+  Blocks: { default: [] }
+}> =
 <template>
   {{#let (state) as |shadow|}}
     <div data-shadow {{attachShadow shadow.update}}></div>
@@ -29,3 +34,4 @@ const getStyles = () => {
   {{/let}}
 </template>
 
+export default Shadowed;

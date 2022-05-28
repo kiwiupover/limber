@@ -37,8 +37,10 @@ importers:
       '@fortawesome/free-solid-svg-icons': ^6.1.0
       '@glimmer/component': ^1.1.2
       '@glimmer/tracking': ^1.1.2
+      '@glint/config': ^0.8.2
       '@glint/core': ^0.8.2
       '@glint/environment-ember-loose': ^0.8.2
+      '@glint/environment-ember-template-imports': ^0.8.2
       '@nullvoxpopuli/eslint-configs': 2.2.5
       '@nullvoxpopuli/horizon-theme': '*'
       '@nullvoxpopuli/limber-codemirror': '*'
@@ -101,6 +103,7 @@ importers:
       ember-headlessui: 0.12.3
       ember-load-initializers: ^2.1.2
       ember-maybe-import-regenerator: ^1.0.0
+      ember-modifier: ^3.2.7
       ember-page-title: ^7.0.0
       ember-popperjs: ^2.0.9
       ember-qunit: ^5.1.5
@@ -116,7 +119,6 @@ importers:
       execa: ^6.1.0
       file-loader: ^6.2.0
       fractal-page-object: ^0.3.0
-      glint-environment-ember-template-imports: ^0.0.4
       highlight.js: ^11.5.1
       highlightjs-glimmer: ^1.4.1
       html-to-image: ^1.9.0
@@ -189,8 +191,10 @@ importers:
       '@fortawesome/free-brands-svg-icons': 6.1.1
       '@fortawesome/free-regular-svg-icons': 6.1.1
       '@fortawesome/free-solid-svg-icons': 6.1.1
+      '@glint/config': 0.8.2
       '@glint/core': 0.8.2
-      '@glint/environment-ember-loose': 0.8.2_iwlcl6vrdbzrll5er47jif5wgq
+      '@glint/environment-ember-loose': 0.8.2_4t3bnpvykxydnsynwqohbv55ee
+      '@glint/environment-ember-template-imports': 0.8.2_b3j52gysgd7i62focxpgpzaybe
       '@nullvoxpopuli/eslint-configs': 2.2.5_typescript@4.6.3
       '@types/babel__core': 7.1.19
       '@types/codemirror': 5.60.5
@@ -240,6 +244,7 @@ importers:
       ember-export-application-global: 2.0.1
       ember-load-initializers: 2.1.2_@babel+core@7.17.9
       ember-maybe-import-regenerator: 1.0.0
+      ember-modifier: 3.2.7_@babel+core@7.17.9
       ember-page-title: 7.0.0
       ember-qunit: 5.1.5_mtboqgsa46gfjsqjp3szmeh254
       ember-resolver: 8.0.3_@babel+core@7.17.9
@@ -251,7 +256,6 @@ importers:
       execa: 6.1.0
       file-loader: 6.2.0_webpack@5.72.1
       fractal-page-object: 0.3.0
-      glint-environment-ember-template-imports: 0.0.4_b3j52gysgd7i62focxpgpzaybe
       loader.js: 4.7.0
       monaco-editor: 0.33.0
       npm-run-all: 4.1.5
@@ -2957,7 +2961,7 @@ packages:
       yargs: 15.4.1
     dev: true
 
-  /@glint/environment-ember-loose/0.8.2_iwlcl6vrdbzrll5er47jif5wgq:
+  /@glint/environment-ember-loose/0.8.2_4t3bnpvykxydnsynwqohbv55ee:
     resolution: {integrity: sha512-I/M9eKvQ5pvNgRbk+LvSqVLz1CiIrDG7Hm+eUvCbsMDQu28Oe8Wl1O+CGelCERkuQIsB1t3EJybGyMCpt8/0qw==}
     peerDependencies:
       '@glimmer/component': ^1.1.2
@@ -2968,6 +2972,17 @@ packages:
       '@glint/config': 0.8.2
       '@glint/template': 0.8.2_@glimmer+component@1.1.2
       ember-cli-htmlbars: 6.0.1
+      ember-modifier: 3.2.7_@babel+core@7.17.9
+    dev: true
+
+  /@glint/environment-ember-template-imports/0.8.2_b3j52gysgd7i62focxpgpzaybe:
+    resolution: {integrity: sha512-SFyy/St7X9Lz9pDzObAsaSNs+NGvwoM4lmFx352L73gamb7nnDVE22PeOQiQA8AjCYtnvxKO6H0EhGI+HqQ/Ew==}
+    peerDependencies:
+      '@glint/environment-ember-loose': ^0.8.2
+      ember-template-imports: ^3.0.0
+    dependencies:
+      '@glint/environment-ember-loose': 0.8.2_4t3bnpvykxydnsynwqohbv55ee
+      ember-template-imports: 3.0.0_ember-cli-htmlbars@6.0.1
     dev: true
 
   /@glint/template/0.8.2_@glimmer+component@1.1.2:
@@ -3704,7 +3719,7 @@ packages:
       debug: 4.3.4
       globby: 11.1.0
       is-glob: 4.0.3
-      semver: 7.3.6
+      semver: 7.3.7
       tsutils: 3.21.0_typescript@4.6.3
       typescript: 4.6.3
     transitivePeerDependencies:
@@ -6860,7 +6875,7 @@ packages:
     dev: true
 
   /ember-cli-normalize-entity-name/1.0.0:
-    resolution: {integrity: sha1-CxT3vLxZmqEXtf3cgeT9A8S61bc=}
+    resolution: {integrity: sha512-rF4P1rW2P1gVX1ynZYPmuIf7TnAFDiJmIUFI1Xz16VYykUAyiOCme0Y22LeZq8rTzwBMiwBwoE3RO4GYWehXZA==}
     dependencies:
       silent-error: 1.1.1
 
@@ -6884,7 +6899,7 @@ packages:
     dev: true
 
   /ember-cli-string-utils/1.1.0:
-    resolution: {integrity: sha1-ObZ3/CgF9VFzc1N2/O8njqpEUqE=}
+    resolution: {integrity: sha512-PlJt4fUDyBrC/0X+4cOpaGCiMawaaB//qD85AXmDRikxhxVzfVdpuoec02HSiTGTTB85qCIzWBIh8lDOiMyyFg==}
 
   /ember-cli-terser/4.0.2:
     resolution: {integrity: sha512-Ej77K+YhCZImotoi/CU2cfsoZaswoPlGaM5TB3LvjvPDlVPRhxUHO2RsaUVC5lsGeRLRiHCOxVtoJ6GyqexzFA==}
@@ -7235,7 +7250,7 @@ packages:
       ember-cli-typescript: 4.2.1
       ember-concurrency: 2.2.1_@babel+core@7.17.9
       ember-element-helper: 0.6.0_ember-source@4.4.0
-      ember-modifier: 3.2.6_@babel+core@7.17.9
+      ember-modifier: 3.2.7_@babel+core@7.17.9
       ember-set-helper: 2.0.1
       ember-truth-helpers: 3.0.0
       focus-trap: 6.7.3
@@ -7282,8 +7297,8 @@ packages:
       - supports-color
     dev: false
 
-  /ember-modifier/3.2.6_@babel+core@7.17.9:
-    resolution: {integrity: sha512-bACaEfGzdnLzQOfkAVeDutCsbOJ0OQqTloLqmWihUx2PLAKWPq6vq4iiTnzVn/LvwI/REVcfc6Ks2nhr6GIMzQ==}
+  /ember-modifier/3.2.7_@babel+core@7.17.9:
+    resolution: {integrity: sha512-ezcPQhH8jUfcJQbbHji4/ZG/h0yyj1jRDknfYue/ypQS8fM8LrGcCMo0rjDZLzL1Vd11InjNs3BD7BdxFlzGoA==}
     engines: {node: 12.* || >= 14}
     dependencies:
       ember-cli-babel: 7.26.11
@@ -7294,7 +7309,6 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - supports-color
-    dev: false
 
   /ember-page-title/7.0.0:
     resolution: {integrity: sha512-oq6+HYbeVD/BnxIO5AkP4gWlsatdgW2HFO10F8+XQiJZrwa7cC7Wm54JNGqQkavkDQTgNSiy1Fe2NILJ14MmAg==}
@@ -9271,16 +9285,6 @@ packages:
   /git-repo-info/2.1.1:
     resolution: {integrity: sha512-8aCohiDo4jwjOwma4FmYFd3i97urZulL8XL24nIPxuE+GZnfsAyy/g2Shqx6OjUiFKUXZM+Yy+KHnOmmA3FVcg==}
     engines: {node: '>= 4.0'}
-    dev: true
-
-  /glint-environment-ember-template-imports/0.0.4_b3j52gysgd7i62focxpgpzaybe:
-    resolution: {integrity: sha512-44H0r8jvaC9uW9+AfT1POT3CPFprOLTkqH0+aoDzqssgl+BgQjuCRk+vlj8joIp4/HlXKm2eT0jErfObPE2VtA==}
-    peerDependencies:
-      '@glint/environment-ember-loose': ^0.7.5
-      ember-template-imports: ^2.0.0
-    dependencies:
-      '@glint/environment-ember-loose': 0.8.2_iwlcl6vrdbzrll5er47jif5wgq
-      ember-template-imports: 3.0.0_ember-cli-htmlbars@6.0.1
     dev: true
 
   /glob-parent/5.1.2:
