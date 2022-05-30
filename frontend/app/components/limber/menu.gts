@@ -1,7 +1,47 @@
-import HeadlessMenu from 'ember-headlessui/components/menu';
-import { PopperJS } from 'ember-popperjs';
+// @ts-ignore
+import _HeadlessMenu from 'ember-headlessui/components/menu';
+import { PopperJS as _PopperJS } from 'ember-popperjs';
+
+import type { ComponentLike, ModifierLike } from "@glint/template";
 
 import type { TemplateOnlyComponent as TOC } from '@ember/component/template-only';
+
+const HeadlessMenu = _HeadlessMenu as unknown as ComponentLike<{
+  Blocks: {
+    default: [
+      {
+        Button: ComponentLike<{ Element: HTMLButtonElement, Blocks: { default: []} }>;
+        Items: ComponentLike<{
+          Element: HTMLButtonElement | HTMLAnchorElement;
+          Blocks: {
+            default: [{ Item: ComponentLike<{
+              Blocks: {
+                default: [{
+                  Element: ComponentLike<{
+                    Element: HTMLButtonElement | HTMLButtonElement;
+                    Args: {
+                      tagName: 'button' | 'a'
+                    }
+                  }>
+                }]
+              }
+            }> }]
+          }
+        }>;
+        isOpen: boolean;
+      }
+    ]
+  }
+}>;
+
+const PopperJS = _PopperJS as unknown as ComponentLike<{
+  Blocks: {
+    default: [
+      ModifierLike,
+      ModifierLike,
+    ]
+  }
+}>;
 
 const Button: TOC<{
   Element: HTMLButtonElement;
