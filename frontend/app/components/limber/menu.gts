@@ -1,6 +1,6 @@
 // @ts-ignore
 import _HeadlessMenu from 'ember-headlessui/components/menu';
-import { PopperJS as _PopperJS } from 'ember-popperjs';
+import { PopperJS } from 'ember-popperjs';
 
 import type { ComponentLike, ModifierLike } from "@glint/template";
 
@@ -30,15 +30,6 @@ const HeadlessMenu = _HeadlessMenu as unknown as ComponentLike<{
         }>;
         isOpen: boolean;
       }
-    ]
-  }
-}>;
-
-const PopperJS = _PopperJS as unknown as ComponentLike<{
-  Blocks: {
-    default: [
-      ModifierLike,
-      ModifierLike,
     ]
   }
 }>;

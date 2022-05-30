@@ -154,7 +154,7 @@
     "ember-functions-as-helper-polyfill": "2.1.1",
     "ember-functions-as-modifiers-polyfill": "1.0.0",
     "ember-headlessui": "0.12.3",
-    "ember-popperjs": "^2.0.9",
+    "ember-popperjs": "^3.0.0",
     "ember-repl": "^2.0.33",
     "ember-resources": "^4.8.2",
     "ember-statechart-component": "3.0.1",

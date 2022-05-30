@@ -9,5 +9,6 @@ declare module "@glint/environment-ember-loose/registry" {
   export default interface Registry {
     // state: HelperLike<{ Args: {}, Return: State }>;
     // attachShadow: ModifierLike<{ Args: { Positional: [State['update']]}}>;
+
   }
 }
