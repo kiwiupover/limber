@@ -165,7 +165,7 @@ importers:
       ember-headlessui: 0.12.3_oxuth5o2tqymdgpuikyryzqy3e
       ember-popperjs: 3.0.0_qnbthgwcrjbxn5cvo7frwcsluu
       ember-repl: 2.0.38_vgzql2aq6y7p5b3qjy4rcmc3gq
-      ember-resources: 4.8.2_egz26wxmxahc2ysi5de7kqgox4
+      ember-resources: link:../../ember-resources/ember-resources
       ember-statechart-component: 3.0.1_gphb3226wu4cyescsgh6rmpi7q
       highlight.js: 11.5.1
       highlightjs-glimmer: 1.4.1_highlight.js@11.5.1
@@ -7851,29 +7851,6 @@ packages:
       - '@babel/core'
       - supports-color
     dev: true
-
-  /ember-resources/4.8.2_egz26wxmxahc2ysi5de7kqgox4:
-    resolution: {integrity: sha512-Ni4zkadhhPsIAGM974pK7gBaaajeFJmjrigKtPIFSaTdeCuNdDn99Cs0NVCZ22QSmh2L5/4tYQh8/nLHggZlaQ==}
-    peerDependencies:
-      '@ember/test-waiters': ^3.0.0
-      '@glimmer/tracking': ^1.0.0
-      ember-concurrency: ^1.0.0 || ^2.0.0
-      ember-source: '>= 3.25.0'
-    peerDependenciesMeta:
-      '@ember/test-waiters':
-        optional: true
-      ember-concurrency:
-        optional: true
-    dependencies:
-      '@babel/runtime': 7.17.9
-      '@ember/test-waiters': 3.0.2
-      '@embroider/addon-shim': 1.6.0
-      '@embroider/macros': 1.6.0
-      '@glimmer/tracking': 1.1.2
-      ember-source: 4.4.0_vgzql2aq6y7p5b3qjy4rcmc3gq
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
 
   /ember-rfc176-data/0.3.17:
     resolution: {integrity: sha512-EVzTTKqxv9FZbEh6Ktw56YyWRAA0MijKvl7H8C06wVF+8f/cRRz3dXxa4nkwjzyVwx4rzKGuIGq77hxJAQhWWw==}

@@ -1,33 +1,31 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { tracked } from '@glimmer/tracking';
 
 import { Resource } from 'ember-resources/core';
 
-import type { HelperLike } from '@glint/template';
+// import type { HelperLike } from '@glint/template';
 
 /**
- * Every custom-manager using object needs to have two types.
- * - one for templates / glint
- * - one for JS/TS
+ * Utility for manipulating any kind of state.
  *
+ * ```hbs
+ *  {{#let (State) as |state|}}
+ *    the value: {{state.value}}
  *
- * Because Glint doesn't have an integration with the managers,
- * this complexity is pushed into user space.
+ *    <button {{on 'click' state.toggle}}>toggle it</button>
  *
- * See issue report:
- *   https://github.com/emberjs/rfcs/issues/822#issuecomment-1140541910
+ *    <button {{on 'click' (fn state.update false)}}>reset it</button>
+ *  {{/let}}
+ * ```
  */
-class State extends Resource {
-  @tracked value: unknown;
+export default class State extends Resource {
+  @tracked value: any;
 
-  update = (nextValue: unknown) => (this.value = nextValue);
+  update = (nextValue: any) => (this.value = nextValue);
   toggle = () => (this.value = !this.value);
 }
 
-/**
- * Glint does not tie into any of the managers.
- * See issue report:
- *   https://github.com/emberjs/rfcs/issues/822
- */
-export default State as unknown as HelperLike<{
-  Return: State;
-}>;
+// export default interface State extends InstanceType<HelperLike<{
+//    Args: {}
+//    Return: State
+//  }>> {}
